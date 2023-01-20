@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		987CB713297B1B9A000C1C7F /* FruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987CB712297B1B9A000C1C7F /* FruitViewController.swift */; };
 		98EBDBDE297A879400F32F03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EBDBDD297A879400F32F03 /* AppDelegate.swift */; };
 		98EBDBE0297A879400F32F03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EBDBDF297A879400F32F03 /* SceneDelegate.swift */; };
 		98EBDBE2297A879400F32F03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EBDBE1297A879400F32F03 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		987CB712297B1B9A000C1C7F /* FruitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewController.swift; sourceTree = "<group>"; };
 		98EBDBDA297A879400F32F03 /* delegateDesignPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = delegateDesignPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98EBDBDD297A879400F32F03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98EBDBDF297A879400F32F03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				98EBDBE6297A879600F32F03 /* Assets.xcassets */,
 				98EBDBE8297A879600F32F03 /* LaunchScreen.storyboard */,
 				98EBDBEB297A879600F32F03 /* Info.plist */,
+				987CB712297B1B9A000C1C7F /* FruitViewController.swift */,
 			);
 			path = delegateDesignPattern;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98EBDBE2297A879400F32F03 /* ViewController.swift in Sources */,
+				987CB713297B1B9A000C1C7F /* FruitViewController.swift in Sources */,
 				98EBDBDE297A879400F32F03 /* AppDelegate.swift in Sources */,
 				98EBDBE0297A879400F32F03 /* SceneDelegate.swift in Sources */,
 			);
