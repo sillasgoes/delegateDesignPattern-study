@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol FruitInfo: AnyObject {
+    func didTapButton(title: String, image: String)
+}
+
 class FruitViewController: UIViewController {
     
     let button1 = UIButton()
@@ -22,6 +26,7 @@ class FruitViewController: UIViewController {
         addConstraint()
     }
     
+    weak var delegate: FruitInfo?
     
     func addView() {
         view.addSubview(button1)
@@ -34,18 +39,14 @@ class FruitViewController: UIViewController {
         button2.translatesAutoresizingMaskIntoConstraints = false
         button3.translatesAutoresizingMaskIntoConstraints = false
         
+        button1.configuration = .configuredButton(title: "Maçã")
+        button1.addTarget(self, action: #selector(tapButton1(sender:)), for: .touchUpInside)
         
-        button1.setTitle("Jaca", for: .normal)
-        button1.backgroundColor = .blue
-        button1.tintColor = .black
+        button2.configuration = .configuredButton(title: "Jaca")
+        button2.addTarget(self, action: #selector(tapButton2(sender:)), for: .touchUpInside)
         
-        button2.setTitle("Maçã", for: .normal)
-        button2.backgroundColor = .blue
-        button2.tintColor = .black
-        
-        button3.setTitle("Melancia", for: .normal)
-        button3.backgroundColor = .blue
-        button3.tintColor = .black
+        button3.configuration = .configuredButton(title: "Melancia")
+        button3.addTarget(self, action: #selector(tapButton3(sender:)), for: .touchUpInside)
     }
     
     func addConstraint() {
@@ -64,6 +65,18 @@ class FruitViewController: UIViewController {
             button3.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -(view.frame.height / 100 * 10)),
             
         ])
+    }
+    
+    @objc func tapButton1(sender: AnyObject) {
+        delegate?.didTapButton(title: "Maçã", image: "maca")
+    }
+    
+    @objc func tapButton2(sender: AnyObject) {
+        delegate?.didTapButton(title: "Jaca", image: "jaca")
+    }
+    
+    @objc func tapButton3(sender: AnyObject) {
+        delegate?.didTapButton(title: "Melancia", image: "melancia")
     }
 
 }

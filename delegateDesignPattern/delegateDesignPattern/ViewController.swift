@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, FruitInfo {
+    
     
     let titleLabel = UILabel()
     let imageProduct = UIImageView()
@@ -35,9 +36,7 @@ class ViewController: UIViewController {
         imageProduct.image = UIImage(named: "maca")
         
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.tintColor = .white
-        button.backgroundColor = .gray
-        button.setTitle("Escolher", for: .normal)
+        button.configuration = .configuredButton(title: "Escolher")
         button.addTarget(self, action: #selector(presentModal(sender:)), for: .touchUpInside)
         
     }
@@ -58,10 +57,14 @@ class ViewController: UIViewController {
         ])
     }
     
-    
+    func didTapButton(title: String, image: String) {
+        titleLabel.text = title
+        imageProduct.image = UIImage(named: image)
+    }
     
     @objc func presentModal(sender: AnyObject){
         let vc = FruitViewController()
+        vc.delegate = self
         vc.modalPresentationStyle = .pageSheet
         vc.sheetPresentationController?.detents=[.medium()]
         vc.sheetPresentationController?.prefersGrabberVisible=true
