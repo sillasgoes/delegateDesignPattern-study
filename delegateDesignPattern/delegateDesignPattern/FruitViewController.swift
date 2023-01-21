@@ -69,14 +69,17 @@ class FruitViewController: UIViewController {
     
     @objc func tapButton1(sender: AnyObject) {
         delegate?.didTapButton(title: "Maçã", image: "maca")
+        self.dismiss(animated: true)
     }
     
     @objc func tapButton2(sender: AnyObject) {
         delegate?.didTapButton(title: "Jaca", image: "jaca")
+        self.dismiss(animated: true)
     }
     
     @objc func tapButton3(sender: AnyObject) {
         delegate?.didTapButton(title: "Melancia", image: "melancia")
+        self.dismiss(animated: true)
     }
 
 }
